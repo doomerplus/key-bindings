@@ -6,6 +6,7 @@ echo '{' >> rule.json
 echo '  "title": "Rules",' >> rule.json
 echo '  "rules": [' >> rule.json
 
+
 echo '    {' >> rule.json
 echo '      "description": "emacs-like",' >> rule.json
 echo '      "manipulators": [' >> rule.json
