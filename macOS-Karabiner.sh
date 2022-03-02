@@ -208,7 +208,7 @@ echo '          "conditions": [' >> rule.json
 echo '            {' >> rule.json
 echo '              "type": "frontmost_application_unless",' >> rule.json
 echo '              "bundle_identifiers": [' >> rule.json
-echo '                "^com\\.apple\\.Terminal", "^com\\.microsoft\\.VSCode"' >> rule.json
+echo '                "^com\\.apple\\.Terminal"' >> rule.json
 echo '              ]' >> rule.json
 echo '            }' >> rule.json
 echo '          ]' >> rule.json
