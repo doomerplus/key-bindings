@@ -1,7 +1,5 @@
-﻿#UseHook
+#UseHook
 SetTitleMatchMode, RegEx
-
-Insert::Suspend, Toggle
 
 ^!t::
   WinGetTitle, title, A
@@ -10,6 +8,8 @@ Insert::Suspend, Toggle
 CapsLock::Ctrl
 ^[::Send {Esc}
 +Esc::Send ~
+
+Backspace::\
 
 ^h::Send {BackSpace}
 
@@ -22,14 +22,14 @@ CapsLock::Ctrl
 ^e::Send {End}
 
 ; For Vim Half-Page Scrolling
-#if not (WinActive("Visual Studio") or WinActive("Windows PowerShell"))
+#if not (WinActive("Visual Studio"))
   ^u::Send +{Home}{Del}
   ^d::Send {Del}
 #if
 
 ; Add `"suppressApplicationTitle": true` to Windows Terminal Profiles to Suppress Title Changes
 ; Use `Import-Module PSReadLine; Set-PSReadlineOption -EditMode Emacs` in Powershell Instead
-#if not (WinActive("Windows PowerShell"))
+#if not (WinActive("PowerShell|Datacenter"))
   ; `stty -ixon` to make C-s forward search instead of sending start/stop characters
   ^s::Send ^f
   !^h::Send ^{BackSpace}
@@ -41,6 +41,6 @@ CapsLock::Ctrl
   ^k::Send +{End}{Del}
 #if
 
-#if (WinActive("Windows PowerShell"))
+#if (WinActive("PowerShell|Datacenter"))
   !^h::Send !{BackSpace}
 #if
