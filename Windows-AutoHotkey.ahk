@@ -1,4 +1,4 @@
-#UseHook
+﻿#UseHook
 SetTitleMatchMode, RegEx
 
 ^!t::
@@ -8,8 +8,6 @@ SetTitleMatchMode, RegEx
 CapsLock::Ctrl
 ^[::Send {Esc}
 +Esc::Send ~
-
-Backspace::\
 
 ^h::Send {BackSpace}
 
