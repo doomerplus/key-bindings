@@ -1,0 +1,17 @@
+[
+  {
+    "key": "cmd+backspace",
+    "command": "extension.vim_ctrl+u",
+    "when": "editorTextFocus && vim.mode == 'Normal'"
+  },
+  {
+    "key": "cmd+backspace",
+    "command": "deleteAllLeft",
+    "when": "textInputFocus && !editorReadonly && !editorTextFocus"
+  },
+  {
+    "key": "cmd+backspace",
+    "command": "-deleteAllLeft",
+    "when": "textInputFocus && !editorReadonly"
+  }
+]

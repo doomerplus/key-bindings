@@ -1,11 +1,6 @@
 ﻿#UseHook
 SetTitleMatchMode, RegEx
 
-#t::
-  WinGetActiveTitle, Title
-  MsgBox, "%Title%"
-  return
-
 CapsLock::Ctrl
 ^[::Send {Esc}
 +Esc::Send ~
@@ -20,11 +15,11 @@ CapsLock::Ctrl
 ^a::Send {Home}
 ^e::Send {End}
 
-; Add `"window.title": "VSCode ${focusedView}"` to VS Code settings.json
+; Add `"window.title": "VS Code ${focusedView}"` to VS Code settings.json
 ; Add `"suppressApplicationTitle": true` to Terminal profile
 ; Add `Import-Module PSReadLine; Set-PSReadlineOption -EditMode Emacs` to Powershell profile
 
-#if not (WinActive("VSCode Text Editor|Microsoft Visual Studio|Windows PowerShell"))
+#if not (WinActive("VS Code Text Editor|Microsoft Visual Studio|Windows PowerShell"))
   ^u::Send +{Home}{Del}
   ^d::Send {Del}
 #if
