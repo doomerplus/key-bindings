@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd ~/.config/karabiner/assets/complex_modifications
 rm -rf rule.json
 
 echo '
